@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Miva Open University | Student Portal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/forms.css" />
+    <link rel="stylesheet" href="css/login.css" />
+  </head>
+  <body class="login-body">
+    <div class="login-shell">
+      <section class="login-hero" aria-label="University portal overview">
+        <div class="login-hero-media">
+          <img src="assets/images/IMG_6412.JPG" alt="Miva matriculation backdrop" class="login-hero-image" />
+          <div class="hero-logo-overlay">
+            <img src="assets/images/miva.jpg" alt="Miva logo" class="hero-miva-logo" />
+          </div>
+        </div>
+      </section>
+
+      <section class="login-card">
+        <div class="login-brand">
+          <div class="login-logo" aria-hidden="true">
+            <img src="assets/images/miva.jpg" alt="Miva logo" class="login-logo-img" />
+          </div>
+          <div class="login-brand-text">
+            <h2>Miva Open University</h2>
+            <div class="login-brand-sub">Student Course Management Portal</div>
+          </div>
+        </div>
+
+        <div class="login-heading">
+          <h1>Welcome back, Baravil Vigale Lawrence</h1>
+          <p>Use your Miva student credentials to continue to your university dashboard.</p>
+        </div>
+
+        <!-- Demo login details removed per request; logo image shown above -->
+
+        <form id="loginForm" novalidate>
+          <div class="form-group">
+            <label for="email">Email address</label>
+            <input id="email" name="email" type="email" value="v.baravil5683@miva.edu.ng" placeholder="student@miva.edu.ng" required />
+            <div class="field-error" id="emailError"></div>
+          </div>
+
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input id="password" name="password" type="password" value="2025/A/CYB/0176" placeholder="Enter your password" required />
+            <div class="field-error" id="passwordError"></div>
+          </div>
+
+          <div class="login-meta">
+            <label class="remember-me">
+              <input type="checkbox" />
+              <span>Keep me signed in</span>
+            </label>
+            <a href="#">Forgot password?</a>
+          </div>
+
+          <button type="submit" class="login-submit-btn">
+            Sign in
+            <span class="login-btn-spinner hidden" aria-hidden="true"></span>
+          </button>
+        </form>
+
+        <div class="login-footnote">
+          Need help? Contact the university IT support desk.
+        </div>
+      </section>
+    </div>
+    <script src="js/login.js"></script>
+  </body>
+</html>
