@@ -177,6 +177,19 @@
   word-break: break-word;
 }
 
+.admin-logout-btn {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: none;
+  background: linear-gradient(180deg, #FEE2E2, #FCA5A5);
+  color: var(--slate-900);
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(252, 165, 165, 0.12);
+}
+.admin-logout-btn:hover { transform: translateY(-2px); box-shadow: 0 12px 28px rgba(252,165,165,0.16); }
+
 /* Administrator Profile card on the Dashboard page */
 .admin-profile-card-body {
   display: flex;
