@@ -20,6 +20,11 @@
     passwordError.textContent = '';
   }
 
+  function init() {
+    const email = new URLSearchParams(window.location.search).get('email');
+    if (email) emailInput.value = email;
+  }
+
   function showError(input, errorEl, message) {
     input.classList.add('invalid');
     errorEl.textContent = message;
@@ -50,8 +55,11 @@
         return;
       }
 
-      // Success: redirect to dashboard (index.html) — keep local behaviour
+      // Success: save authenticated flag and redirect to dashboard
+      sessionStorage.setItem('scms_logged_in', 'true');
       window.location.href = 'index.html';
     }, 700);
   });
+
+  init();
 })();

@@ -591,5 +591,12 @@
 <script src="js/search.js"></script>
 <script src="js/app.js"></script>
 <script src="js/auth.js"></script>
+<script>
+  (function () {
+    if (sessionStorage.getItem('scms_logged_in') !== 'true') {
+      window.location.href = 'login.html';
+    }
+  })();
+</script>
 </body>
 </html>
