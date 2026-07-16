@@ -1,22 +1,19 @@
-// Simple client-side "demo" auth for the local login page.
-// Validates against the provided demo credentials and shows field errors.
+// Simple client-side demo auth for the local login page.
+// Users can sign in directly without entering email or password.
 (function () {
-  const form = document.getElementById("loginForm");
-  const spinner = document.querySelector(".login-btn-spinner");
+  const loginBtn = document.getElementById('loginBtn');
+  const spinner = document.querySelector('.login-btn-spinner');
 
-  form.addEventListener("submit", function (e) {
-    e.preventDefault();
+  if (!loginBtn) return;
 
-    spinner.classList.remove("hidden");
+  loginBtn.addEventListener('click', function () {
+    spinner.classList.remove('hidden');
+    loginBtn.disabled = true;
 
     setTimeout(() => {
-      spinner.classList.add("hidden");
-window.location.href = "./index.html";
-      // Optional: keep this if other pages check it
-      sessionStorage.setItem("scms_logged_in", "true");
-window.location.href = "pages/index.html";
-      // Go to the homepage/dashboard
-      window.location.href = "index.html";
-    }, 500);
+      spinner.classList.add('hidden');
+      sessionStorage.setItem('scms_logged_in', 'true');
+      window.location.href = './index.html';
+    }, 300);
   });
 })();
