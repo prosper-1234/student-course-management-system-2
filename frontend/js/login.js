@@ -11,10 +11,10 @@
 
     setTimeout(() => {
       spinner.classList.add("hidden");
-
+window.location.href = "./index.html";
       // Optional: keep this if other pages check it
       sessionStorage.setItem("scms_logged_in", "true");
-
+window.location.href = "pages/index.html";
       // Go to the homepage/dashboard
       window.location.href = "index.html";
     }, 500);
